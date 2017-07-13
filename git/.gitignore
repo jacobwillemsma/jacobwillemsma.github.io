@@ -2,14 +2,6 @@
 npm-debug.log
 node_modules/
 
-# Build artifacts and asset stuff
-build/*
-build/bundle.js
-build/bundle.*.js
-build/main.*.css
-screens
-FontAwesome-Vectors.pdf
-index.html
 
 # Vim swaps
 *.sw*
