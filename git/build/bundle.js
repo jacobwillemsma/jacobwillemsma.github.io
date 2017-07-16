@@ -47574,25 +47574,8 @@ exports.levelSequences = {
   ],
   rampup: [
     require('./rampup/detachedHead').level,
-    require('./rampup/relativeRefs').level,
     require('./rampup/relativeRefs2').level,
     require('./rampup/reversingChanges').level
-  ],
-  move: [
-    require('./rampup/cherryPick').level,
-    require('./rampup/interactiveRebase').level
-  ],
-  mixed: [
-    require('./mixed/grabbingOneCommit').level,
-    require('./mixed/jugglingCommits').level,
-    require('./mixed/jugglingCommits2').level,
-    require('./mixed/tags').level,
-    require('./mixed/describe').level
-  ],
-  advanced: [
-    require('./rebase/manyRebases').level,
-    require('./advanced/multipleParents').level,
-    require('./rebase/selectiveRebase').level
   ],
   remote: [
     require('./remote/clone').level,
@@ -47603,15 +47586,9 @@ exports.levelSequences = {
     require('./remote/push').level,
     require('./remote/fetchRebase').level
   ],
-  remoteAdvanced: [
-    require('./remote/pushManyFeatures').level,
-    require('./remote/mergeManyFeatures').level,
-    require('./remote/tracking').level,
-    require('./remote/pushArgs').level,
-    require('./remote/pushArgs2').level,
-    require('./remote/fetchArgs').level,
-    require('./remote/sourceNothing').level,
-    require('./remote/pullArgs').level
+  move: [
+    require('./rampup/cherryPick').level,
+    require('./rampup/interactiveRebase').level
   ]
 };
 
@@ -47824,7 +47801,7 @@ exports.getTabForSequence = function(sequenceName) {
     'main';
 };
 
-},{"./advanced/multipleParents":244,"./intro/branching":246,"./intro/commits":247,"./intro/merging":248,"./intro/rebasing":249,"./mixed/describe":250,"./mixed/grabbingOneCommit":251,"./mixed/jugglingCommits":252,"./mixed/jugglingCommits2":253,"./mixed/tags":254,"./rampup/cherryPick":255,"./rampup/detachedHead":256,"./rampup/interactiveRebase":257,"./rampup/relativeRefs":258,"./rampup/relativeRefs2":259,"./rampup/reversingChanges":260,"./rebase/manyRebases":261,"./rebase/selectiveRebase":262,"./remote/clone":263,"./remote/fakeTeamwork":264,"./remote/fetch":265,"./remote/fetchArgs":266,"./remote/fetchRebase":267,"./remote/mergeManyFeatures":268,"./remote/pull":269,"./remote/pullArgs":270,"./remote/push":271,"./remote/pushArgs":272,"./remote/pushArgs2":273,"./remote/pushManyFeatures":274,"./remote/remoteBranches":275,"./remote/sourceNothing":276,"./remote/tracking":277}],246:[function(require,module,exports){
+},{"./intro/branching":246,"./intro/commits":247,"./intro/merging":248,"./intro/rebasing":249,"./rampup/cherryPick":255,"./rampup/detachedHead":256,"./rampup/interactiveRebase":257,"./rampup/relativeRefs2":259,"./rampup/reversingChanges":260,"./remote/clone":263,"./remote/fakeTeamwork":264,"./remote/fetch":265,"./remote/fetchRebase":267,"./remote/pull":269,"./remote/push":271,"./remote/remoteBranches":275}],246:[function(require,module,exports){
 exports.level = {
   "goalTreeString": "{\"branches\":{\"master\":{\"target\":\"C1\",\"id\":\"master\"},\"bugFix\":{\"target\":\"C1\",\"id\":\"bugFix\"}},\"commits\":{\"C0\":{\"parents\":[],\"id\":\"C0\",\"rootCommit\":true},\"C1\":{\"parents\":[\"C0\"],\"id\":\"C1\"}},\"HEAD\":{\"target\":\"bugFix\",\"id\":\"HEAD\"}}",
   "solutionCommand": "git branch bugFix;git checkout bugFix",
