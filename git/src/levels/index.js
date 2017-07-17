@@ -17,9 +17,7 @@ exports.levelSequences = {
     require('./remote/remoteBranches').level,
     require('./remote/fetch').level,
     require('./remote/pull').level,
-    require('./remote/fakeTeamwork').level,
     require('./remote/push').level,
-    require('./remote/fetchRebase').level
   ],
   move: [
     require('./rampup/cherryPick').level,
