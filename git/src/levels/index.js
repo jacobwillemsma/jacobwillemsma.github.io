@@ -9,7 +9,6 @@ exports.levelSequences = {
   ],
   rampup: [
     require('./rampup/detachedHead').level,
-    require('./rampup/relativeRefs2').level,
     require('./rampup/reversingChanges').level
   ],
   remote: [
